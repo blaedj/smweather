@@ -14,6 +14,7 @@ I see this app as having 2 main portions, with a possible third...
 1. Welcome page
 2. User Account creation
 3. User Account settings
+
 #### Data Processing
 Deals with Twilio, to send/recieve texts
 Deals with a weather service, to fetch forcasts
