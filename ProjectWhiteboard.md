@@ -11,15 +11,15 @@
 ### TO IMPLEMENT
 I see this app as having 2 main portions, with a possible third...
 #### Web UI
-1. Welcome page
-2. User Account creation
-3. User Account settings
+* Welcome page
+* User Account creation
+* User Account settings
 
 #### Data Processing
-Deals with Twilio, to send/recieve texts
-Deals with a weather service, to fetch forcasts
- *  Forecast.io?
- * they have a pretty good free tier service, first 1000 api calls free every day.
+* Deals with Twilio, to send/recieve texts
+* Deals with a weather service, to fetch forcasts
+  *  Forecast.io?
+  * they have a pretty good free tier service, first 1000 api calls free every day.
 
 #### Data Storage
 * Stores user info,
