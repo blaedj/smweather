@@ -1,2 +1,3 @@
+[![Stories in Ready](http://badge.waffle.io/blaedj/smweather.png)](http://waffle.io/blaedj/smweather)  
 When it comes to weather forecasts, SMWeather make your dumb phone smart!!
 Check back for more details, coming soon!
