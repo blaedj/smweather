@@ -1,12 +1,14 @@
 Smweather::Application.routes.draw do
 
-  get "static_pages/home"
-  get "static_pages/help"
+  root :to => 'static_pages#home'
+
+  get '/help' => 'static_pages#help'
+
+  get '/signup' => 'users#new'
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'static_pages#home'
-  get 'help', to: 'static_pages#help'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

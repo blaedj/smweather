@@ -9,7 +9,7 @@
   * Text the SMWeather number any time of day and receive a text message with the forecast for the next 24 hours.
   * Keep any other feature ideas to yourself, actually don't even think about them, this is the only feature. until it is complete.
 * TO IMPLEMENT:
-  * I see this app as having 2 main portions, with a possible third...
+  * I see this app as having 2 main portions, with a possible third
 ** Web UI
 *** Welcome page
     * Replace the default welcome page

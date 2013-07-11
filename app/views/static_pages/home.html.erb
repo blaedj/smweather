@@ -1,2 +1,11 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<h1>SMWeather</h1>
+<p>Welcome to SMWeather, the simple text-message weather forecast service.</p>
+
+<%= link_to  'Create Account', signup_path %>
+
+
+<%= form_tag("/textTrial", method: "get") do %>
+  <%= label_tag(:number, "Phone Number") %>
+  <%= text_field_tag(:number) %>
+  <%= submit_tag("Text me the weather!") %>
+<% end %>

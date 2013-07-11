@@ -25,3 +25,10 @@ I see this app as having 2 main portions, with a possible third...
 * Stores user info,
 * may need to store phone number and associated location for forecasts.
 * Used by both of the other 2 parts
+
+## Decisions
+   * Use heroku for webapp hosting
+   * Use Postgres
+   * Twilio
+   * Forecast.io
+   * Start with Webpage
