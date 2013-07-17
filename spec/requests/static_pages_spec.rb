@@ -12,18 +12,13 @@ describe "Static pages" do
 
     # test for sign-up
     it "should have links to sign-up page" do
-      expect(page).to have_link('Create Account', href: signup_path )
+      expect(page).to have_link('Sign Up Now', href: signup_path )
     end
 
     # TODO test for 'text me weather'
     it "should have button to text weather " do
-      expect(page).to have_selector('button', text:'Text me the weather')
+      expect(page).to have_button("Text me the weather")
     end
-
-    # TODO test for Login button
-
-    # TODO test for 'forgot password'
-
 
   end
 

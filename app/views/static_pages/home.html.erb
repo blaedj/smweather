@@ -1,11 +1,24 @@
+
+
+
 <h1>SMWeather</h1>
 <p>Welcome to SMWeather, the simple text-message weather forecast service.</p>
 
-<%= link_to  'Create Account', signup_path %>
+<%= link_to image_tag('stockCellPhone.jpg', alt: "stock cell phone image") %>
+
+<div class="row">
+  <%= form_tag("/textTrial", method: "post") do %>
+  <div class="small-5 columns ">
+    <!-- <%= label_tag(:number, "Phone Number", class: "inline left") %> -->
+    <%= text_field_tag( :number,"Enter Phone Number", class: "inline right") %>
+
+  </div>
+  <%= submit_tag( "Text me the weather", class: "button inline") %>
+</div>
 
 
-<%= form_tag("/textTrial", method: "get") do %>
-  <%= label_tag(:number, "Phone Number") %>
-  <%= text_field_tag(:number) %>
-  <%= submit_tag("Text me the weather!") %>
+
+
 <% end %>
+
+<%= link_to 'Sign Up Now', signup_path, class: "button" %>

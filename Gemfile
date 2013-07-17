@@ -6,17 +6,20 @@ gem 'rails', '4.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'sass-rails',   '~> 4.0.0'
+gem 'sass-rails',  '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 2.1.1'
+gem 'compass-rails'
+gem 'zurb-foundation', '~> 4.0.0'
 
 group :development, :test do
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
-  gem 'guard-spork', '1.2.0'
-  gem 'childprocess', '0.3.9'
-  gem 'spork', '0.9.2'
+  gem 'guard-spork', '>= 1.4.2'
+  gem 'childprocess', '>= 0.3.9'
+  gem 'spork'
 end
+
 
 
 # See https://github.com/sstephenson/execjs#readme
