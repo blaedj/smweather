@@ -17,7 +17,7 @@ describe "Static pages" do
 
     # TODO test for 'text me weather'
     it "should have button to text weather " do
-      expect(page).to have_button("Text me the weather")
+      expect(page).to have_button("Text me the weather!")
     end
 
   end

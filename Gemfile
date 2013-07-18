@@ -15,9 +15,9 @@ gem 'zurb-foundation', '~> 4.0.0'
 group :development, :test do
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
-  gem 'guard-spork', '>= 1.4.2'
+#  gem 'guard-spork', '>= 1.4.2'
   gem 'childprocess', '>= 0.3.9'
-  gem 'spork'
+#  gem 'spork'
 end
 
 
