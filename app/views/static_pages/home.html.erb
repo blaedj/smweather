@@ -1,20 +1,16 @@
 
-
-
-<h1>SMWeather</h1>
-<p>Welcome to SMWeather, the simple text-message weather forecast service.</p>
+<h2>Make Your Dumb Phone Smart</h2>
 
 <div class="row">
-  <%= form_tag("/textTrial", method: "post") do %>
-  <div class="small-5 columns ">
-    <%= text_field_tag( :number,"Enter Phone Number", class: "inline right") %>
+  <div class="large-3 columns ">
+    <%= form_tag("/textTrial", method: "post") do %>
+    <%= text_field_tag( :number,"Enter Phone Number", class: "inline ") %>
+    <%= submit_tag( "Text me the weather!", class: "button inline ") %>
+    <% end %>
   </div>
-  <%= submit_tag( "Text me the weather!", class: "button inline") %>
 </div>
-<% end %>
+
 
 
 <%= link_to image_tag('stockCellPhone.jpg', alt: "stock cell phone image") %>
-
-
-<%= link_to 'Sign Up Now', signup_path, class: "button" %>
+<%= link_to 'Sign Up Now!', signup_path, class: "small button" %>
