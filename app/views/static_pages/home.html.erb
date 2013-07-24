@@ -1,3 +1,7 @@
+<% provide(:title, 'SMWeather')%>
+
+<h1>SMWeather</h1>
+<p>Welcome to SMWeather, the simple text-message weather forecast service.</p>
 
 <h2>Make Your Dumb Phone Smart</h2>
 
@@ -9,8 +13,15 @@
     <% end %>
   </div>
 </div>
+<div class="row"
+	<div class="large-3 columns">
+		<%= link_to image_tag('stockCellPhone.jpg', alt: "stock cell phone image") %>
+	</div>
+</div>
+<div class="large-12 columns"
+	<div class="large-3 columns">
+		<%= link_to 'Sign Up Now!', signup_path, class: "inline button" %>
+	</div>
+</div>
 
 
-
-<%= link_to image_tag('stockCellPhone.jpg', alt: "stock cell phone image") %>
-<%= link_to 'Sign Up Now!', signup_path, class: "small button" %>
