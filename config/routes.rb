@@ -1,10 +1,21 @@
 Smweather::Application.routes.draw do
 
+  resource :users
+
+  get "user/new"
+  get "user/create"
+  get "user/edit"
+  get "user/update"
+  get "user/destroy"
+  get "trial_text/sendtext"
+
   root :to => 'static_pages#home'
 
-  get '/help' => 'static_pages#help'
+  get '/help',  to: 'static_pages#help',  via: 'get'
 
-  get '/signup' => 'users#new'
+  get '/signup', to: 'static_pages#home',   via: 'get' #this should be users#new
+
+  post '/sendText', to: 'trial_text#sendtext' 
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.

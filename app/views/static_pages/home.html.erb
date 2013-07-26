@@ -1,16 +1,27 @@
+<% provide(:title, 'SMWeather')%>
+
+<h1>SMWeather</h1>
+<p>Welcome to SMWeather, the simple text-message weather forecast service.</p>
 
 <h2>Make Your Dumb Phone Smart</h2>
 
 <div class="row">
-  <div class="large-3 columns ">
-    <%= form_tag("/textTrial", method: "post") do %>
+  <div class="large-3 columns "> <!--TO DO: Add share/error...verification" -->
+    <%= form_tag(sendText_path) do %>
     <%= text_field_tag( :number,"Enter Phone Number", class: "inline ") %>
     <%= submit_tag( "Text me the weather!", class: "button inline ") %>
     <% end %>
   </div>
 </div>
+<div class="row"
+	<div class="large-3 columns">
+		<%= link_to image_tag('stockCellPhone.jpg', alt: "stock cell phone image") %>
+	</div>
+</div>
+<div class="large-12 columns"
+	<div class="large-3 columns">
+		<%= link_to 'Sign Up Now!', signup_path, class: "inline button" %>
+	</div>
+</div>
 
 
-
-<%= link_to image_tag('stockCellPhone.jpg', alt: "stock cell phone image") %>
-<%= link_to 'Sign Up Now!', signup_path, class: "small button" %>
