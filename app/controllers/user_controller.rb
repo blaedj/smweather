@@ -1,4 +1,5 @@
 class UserController < ApplicationController
+
   def new
     @users = User.new
   end
@@ -13,5 +14,6 @@ class UserController < ApplicationController
   end
 
   def destroy
+
   end
 end

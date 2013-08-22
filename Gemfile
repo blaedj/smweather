@@ -11,6 +11,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 2.1.1'
 gem 'compass-rails'
 gem 'zurb-foundation', '~> 4.0.0'
+gem 'twilio-ruby'
+
 
 group :development, :test do
   gem 'rspec-rails', '2.11.0'

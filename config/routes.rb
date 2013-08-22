@@ -15,7 +15,9 @@ Smweather::Application.routes.draw do
 
   get '/signup', to: 'static_pages#home',   via: 'get' #this should be users#new
 
-  post '/sendText', to: 'trial_text#sendtext' 
+  post '/sendText', to: 'trial_text#sendtext'
+
+  post '/smsrecieve', to: 'text_reciever#smsRecieve'
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.

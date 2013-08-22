@@ -43,4 +43,5 @@ tramp
 
 # Org-mode
 .org-id-locations
-*_archive
+*_archiveconfig/config.yml
+/config/config.yml

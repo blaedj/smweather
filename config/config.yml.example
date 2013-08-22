@@ -1,0 +1,5 @@
+# TODO need to fill these and rename this file to 'config/config.yml'
+
+twilio_sid: "put twilio sid here"
+twilio_token: " twilio security token here"
+twilio_phone_number: "twilio security token here"
