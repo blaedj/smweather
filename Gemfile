@@ -5,7 +5,8 @@ gem 'rails', '4.0'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+#gem 'sqlite3'
+gem 'pg' #use postgresql database, for compat. w/ heroku
 gem 'sass-rails',  '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 2.1.1'
