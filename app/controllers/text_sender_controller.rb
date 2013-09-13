@@ -9,9 +9,9 @@ class TextSenderController < ApplicationController
     # twilio_token = Rails.config.twilio_token
     # twilio_phone_number = Rails.config.twilio_phone_number
 
-    twilio_sid = ENV['TWIL_SID']
-    twilio_token = ENV['TWIL_TOKEN']
-    twilio_phone_number = ['TWIL_NUM']
+    twilio_sid = ENV['TWIL_SID'] || raise("No twilio id environment variable set!")
+    twilio_token = ENV['TWIL_TOKEN']  || raise("No twilio token environment variable set!")
+    twilio_phone_number = ['TWIL_NUM']  || raise("No twilio phone number  environment variable set!")
 
     @twil_client = Twilio::REST::Client.new twilio_sid, twilio_token
 
