@@ -5,9 +5,13 @@ class TextSenderController < ApplicationController
     message_to_send = params[:message_to_send]
 
     # get the sensitive data from custom rails configuration settings
-    twilio_sid = Rails.config.twilio_sid
-    twilio_token = Rails.config.twilio_token
-    twilio_phone_number = Rails.config.twilio_phone_number
+    # twilio_sid = Rails.config.twilio_sid
+    # twilio_token = Rails.config.twilio_token
+    # twilio_phone_number = Rails.config.twilio_phone_number
+
+    twilio_sid = ENV['TWIL_SID']
+    twilio_token = ENV['TWIL_TOKEN']
+    twilio_phone_number = ['TWIL_NUM']
 
     @twil_client = Twilio::REST::Client.new twilio_sid, twilio_token
 
