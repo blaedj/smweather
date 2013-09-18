@@ -11,7 +11,7 @@ class TextRecieverController < ApplicationController
 
     render :nothing => true
 
-    parseMessage message_body
+    @parser = parseMessage message_body
 
     # the following is the format of the Twilio post (json)
     # {
@@ -37,7 +37,7 @@ class TextRecieverController < ApplicationController
 
   def parseMessage( message_text)
 
-    if message_text.includes? "weather"
+    if message_text.include? "weather"
       parser = WeatherParser.initialize(message_text)
     end
 
