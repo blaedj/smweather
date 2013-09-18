@@ -10,8 +10,8 @@ describe TextRecieverController do
 
         data = {"Body" => "Woooo","From" => "5555555555"}
         post :smsRecieve, data
-        response.should be_success
-
+        # response.should be_success
+        expect(response).to be_success
       end
 
     end

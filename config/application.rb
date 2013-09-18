@@ -59,6 +59,8 @@ module Smweather
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    # uncomment below to use a config/yaml file to store custom env variables
+    # such as twilio keys, tokens and phone numbers.
     # YAML.load_file("#{Rails.root}/config/config.yml").each{ |k,v| config.send "#{k}=", v }
 
   end
