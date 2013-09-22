@@ -9,7 +9,7 @@ class TextRecieverController < ApplicationController
     # SMSLogger.log_text_message from_number, message_body
     logger.debug "the message recieved was:\n '#{message_body}'\n from\n #{from_number} "
 
-    render :nothing => true
+
 
     @parser = parseMessage message_body unless !message_body
 
@@ -36,13 +36,15 @@ class TextRecieverController < ApplicationController
     twilio_token = ENV['TWIL_TOKEN']  || raise("No twilio token environment variable set!")
     twilio_phone_number = ['TWIL_NUM']  || raise("No twilio phone number  environment variable set!")
 
-    @twil_bot = TWILIO::REST:Client.new twilio_sid, twilio_token
+    @twil_bot = ::TWILIO::REST:Client.new twilio_sid, twilio_token
 
     @twil_bot.account.messages.create(
                                       :from => twilio_phone_number,
                                       :to => from_number,
                                       body => "Your message was recieved and logged for further analysis. Thank you!" )
 
+
+    render :nothing => true
 
   end
 
