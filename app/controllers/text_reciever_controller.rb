@@ -32,8 +32,17 @@ class TextRecieverController < ApplicationController
     #   "From"=>"5555992673",
     #   "FromZip"=>"49507"
     # }
+    twilio_sid = ENV['TWIL_SID'] || raise("No twilio id environment variable set!")
+    twilio_token = ENV['TWIL_TOKEN']  || raise("No twilio token environment variable set!")
+    twilio_phone_number = ['TWIL_NUM']  || raise("No twilio phone number  environment variable set!")
 
-    return "<Response>Recieved!<Response>"
+    @twil_bot = TWILIO::REST:Client.new twilio_sid, twilio_token
+
+    @twil_bot.account.messages.create(
+                                      :from => twilio_phone_number,
+                                      :to => from_number,
+                                      body => "Your message was recieved and logged for further analysis. Thank you!" )
+
 
   end
 
