@@ -19,7 +19,7 @@ class TextRecieverController < ApplicationController
     twilio_token = ENV['TWIL_TOKEN']  || raise("No twilio token environment variable set!")
     twilio_phone_number = ['TWIL_NUM']  || raise("No twilio phone number  environment variable set!")
 
-    @twil_bot = ::TWILIO::REST:Client.new twilio_sid, twilio_token
+    @twil_bot = TWILIO::REST:Client.new twilio_sid, twilio_token
 
     @twil_bot.account.messages.create(
                                       :from => twilio_phone_number,
