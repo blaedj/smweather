@@ -15,19 +15,16 @@ describe TextRecieverController do
         # response.should be_success
         expect(response).to be_success
       end
+    end
 
-      it "Returns twiml" do
-        data = {"Body" => "Woooo","From" => "5555555555", "FromState" => "NY", "FromCity" => "New York"}
-        post :smsRecieve, data
+    it "Returns twiml" do
+      data = {"Body" => "Woooo","From" => "5555555555", "FromState" => "NY",
+        "FromCity" => "New York"}
+      get :smsRecieve, data
 
-        expected = "<Response> <Sms>Hey, thanks for the text! Hmm... you wouldn't be from New York, NY by any chance?</Sms></Response> "
-        expect(response).to eq(expected)
-
-      end
-
+      expect(response).to render_template("text_reciever/process_sms.xml.erb")
     end
 
   end
-
 
 end
