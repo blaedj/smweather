@@ -34,6 +34,8 @@ I see this app as having 2 main portions, with a possible third...
    * Start with Webpage
 
 ### Example Send text
+* Not sure if this sends the message automatically
+* There is some setup requires for the twilio SID and Token
      @twil_bot = TWILIO::REST:Client.new twilio_sid, twilio_token
 
      @twil_bot.account.messages.create(
