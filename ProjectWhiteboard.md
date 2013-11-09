@@ -32,3 +32,11 @@ I see this app as having 2 main portions, with a possible third...
    * Twilio
    * Forecast.io
    * Start with Webpage
+
+### Example Send text
+     @twil_bot = TWILIO::REST:Client.new twilio_sid, twilio_token
+
+     @twil_bot.account.messages.create(
+                :from => twilio_phone_number,
+                :to => from_number,
+                :body => "Your message was recieved")
