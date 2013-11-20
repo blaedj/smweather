@@ -4,10 +4,6 @@ class TextSenderController < ApplicationController
     number_to_send_to = params[:number_to_send_to]
     message_to_send = params[:message_to_send]
 
-    # get the sensitive data from custom rails configuration settings
-    # twilio_sid = Rails.config.twilio_sid
-    # twilio_token = Rails.config.twilio_token
-    # twilio_phone_number = Rails.config.twilio_phone_number
 
     twilio_sid = ENV['TWIL_SID'] || raise("No twilio id environment variable set!")
     twilio_token = ENV['TWIL_TOKEN']  || raise("No twilio token environment variable set!")

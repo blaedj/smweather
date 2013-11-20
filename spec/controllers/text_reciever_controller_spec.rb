@@ -24,7 +24,6 @@ describe TextRecieverController do
 
       expect(response).to render_template("text_reciever/process_sms.xml.erb")
     end
-
   end
 
 end
